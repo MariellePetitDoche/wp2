@@ -1,0 +1,88 @@
+\documentclass{template/openetcs_article}
+\usepackage{lipsum,url}
+\graphicspath{{./template/}{.}{./images/}}
+\begin{document}
+\frontmatter
+\project{openETCS}
+
+%Please do not change anything above this line
+%============================
+% The document metadata is defined below
+
+%assign a report number here
+\reportnum{OETCS/WP2/D23}
+
+%define your workpackage here
+\wp{Work-Package 2: ``Requirements Open Proofs''}
+
+%set a title here
+\title{Documentation template for openETCS article}
+
+%set a subtitle here
+\subtitle{A template for short document. Adapted from report template.}
+
+%set the date of the report here
+\date{October 2012\\Revised October 2012}
+
+%define a list of authors and their affiliation here
+
+\author{Marielle Petit-Doche}
+
+\author{Matthias Güdemann}
+
+\affiliation{Systerel\\
+  Les Portes de l’Arbois, Bâtiment A \\
+  1090 rue René Descartes \\
+  13857 Aix-en-Provence Cedex 3, France}
+  
+  
+% define the coverart
+\coverart[width=350pt]{chart}
+
+%define the type of report
+\reporttype{Description of work}
+
+
+\begin{abstract}
+%define an abstract here
+  \lipsum[12-13]
+\end{abstract}
+
+%=============================
+%Do not change the next three lines
+\maketitle
+\tableofcontents
+\listoffiguresandtables
+\newpage
+%=============================
+
+% The actual document starts below this line
+%=============================
+
+
+%Start here
+
+
+
+
+
+
+
+
+
+%Examples are below
+
+\section{General Information}
+\label{sec:general-information}
+\input{general}
+
+\section{Development Process}
+\label{sec:development-process}
+\input{process}
+
+%\input{methods}
+
+%===================================================
+%Do NOT change anything below this line
+
+\end{document}
