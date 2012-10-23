@@ -8,6 +8,10 @@
 *~
 *.toc
 *.aux
+*.rel
+*.dvi
+*.pdf
+*.ps
 auto/*
 /README.md
 /sample_article.log
