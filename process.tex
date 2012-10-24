@@ -1,6 +1,6 @@
 
-\subsection{Software Lifecycle}
-\label{sec:software-lifecycle}
+\subsection{Objectives}
+\label{sec:objectives}
 
 The two most important goals of the CENELEC EN 50128 standard are the separation
 of the lifecycle into well-defined phases and to produce and record all
@@ -20,24 +20,52 @@ intended semantics of the ERTMS specification.
 \subsection{Organisational Structure and Roles}
 \label{sec:organ-struct-roles}
 
-CENELEC EN 50128 defines a set of required roles for the development of SIL3 or
-SIL4 compliant software (e.g. requirements manager, assessor, etc., for a full
+CENELEC EN 50128 defines a set of required roles for the development of SIL4 (or
+SIL3) compliant software (e.g. requirements manager, assessor, etc., for a full
 list see 5.1 of CENELEC EN 50128). Theses roles and which of these roles can be
 filled by the same person are specified in 5.1.2.10 of the standard. This
 distribution and in particular the required separation of several of the roles
 will be mandatory for the development process.
 
-\subsection{Consistency of Documentation}
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=.9\textwidth]{CenelecRoles}
+  \caption{Preferred Organisational Roles}
+  \label{fig:preferred-roles}
+\end{figure}
+
+Fig.~\ref{fig:preferred-roles} shows the preferred organisational structure
+according to CENELEC EN 50128, in particular  the role separations,
+e.g., the verifier cannot be the same person as tester, the requirements
+manager must be a different person than the integrator and the validator must be
+independent of the project manager.
+
+In contrast, the SCRUM development process only defines three roles: project
+owner, SCRUM master and team member. These roles mus be refined for an agile SW
+development in accordance with the standard.
+
+\subsection{Documentation}
+\label{sec:documentation}
+
+The development according to CENELEC EN 50128 is document-centered and many
+mandatory documents mus be created. This is in contrast to the agile
+development, where only the software is seen as the relevant product. So for
+each of the small iterations of the agile process not only the SW shall be of
+concern, but also the generated documentation, in particular the update of
+existing documentation and the verification of consistency regarding related or
+referenced documents.
+
+\subsubsection{Consistency of Documentation}
 \label{sec:cons-docum}
 
-For the development according to CENELEC EN 50128, it is mandatory to have a
-consistent definition and usage of all terms, abbreviations etc. This is
-especially important if the development process uses small scale iterations, as
-the consistency must be assured and restores in necessary after each
-iteration. In particular, it must be assured at all times, that dependent
-documents, i.e., in hierarchical relation do not contradict each other.
+It is mandatory to have a consistent definition and usage of all terms,
+abbreviations etc. This is especially important if the development process uses
+small scale iterations, as the consistency must be assured and restores in
+necessary after each iteration. In particular, it must be assured at all times,
+that dependent documents, i.e., in hierarchical relation do not contradict each
+other.
 
-\subsection{Traceability of Requirements}
+\subsubsection{Traceability of Requirements}
 \label{sec:trac-requ}
 
 For each of the generated documents, the traceability must be assured by
@@ -45,6 +73,13 @@ referencing all other concerned documents and by specifying unique reference
 numbers. Just as consistency, this traceability is a very important aspect which
 is often not a concern in more general software development processes.
 
+
+\subsection{Quality Assurance}
+\label{sec:quality-assurance}
+
+The SW development according to CENELEC EN 50128 requires parallel quality
+assurance procedures. This will be well implementable using agile development
+which uses several techniques to assure the quality of the results.
 
 
 %% some ideas of agile in safety critical development:
