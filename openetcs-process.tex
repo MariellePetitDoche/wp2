@@ -34,28 +34,138 @@ requirements specification.
 
 In openETCS the DES will be responsible to specify the components and to ensure
 the consistency, correctness and traceability of the component specification
-wrt. the SW requirements specification.
+wrt. the SW requirements specification. The proposed methods and tools shall
+support automatic transformations and facilitate collaborative tools as far as
+possible.
 
 \subsubsection{Implementer (IMP)}
 \label{sec:implementer}
 
+The main task of the IMP is the transformation of the software design solution
+into source code, DSLs or other appropriate formalisms. Besides the
+implementation she will produce the documentation describing the implementation,
+the applied methods, data types and data structures. She will also ensure the
+traceability wrt. SW design. The IMP will apply the specified coding standards,
+use the specified programming languages and use safety design principles.
+
+In openETCS the IMP will work the most in an agile way. Each implemented
+solution will be directly tested by unit tests derived from the SW requirement
+specification. Using this test-driven approach and using the continuous build
+approach, i.e., the source code may only be checked-in if it is at least
+compilable, the SW implementation can be verified after each small iteration. As
+far as possible, this will be done automatically.
+
 \subsubsection{Tester (TST)}
 \label{sec:tester}
+
+The TST is responsible for the planning of all test activities and will produce
+the test specification which includes the test cases and their objectives. She
+is responsible to assure the execution of the SW tests, the recording of their
+outcomes and to select the test equipments and methods. The TST will communicate
+relevant deviations from the specifications to the change management.
+
+In openETCS the specification of the SW tests shall include higher level tests
+which are run by the tester. Nevertheless, the tester shall also specify
+low-level unit tests which shall be used by the implementers to verify their
+implementation directly. Only after each of the unit tests is completed shall
+the tester do her more elaborate tests.
 
 \subsubsection{Verifier (VER)}
 \label{sec:verifier}
 
+The VER is responsible to produce the SW verification plan which specifies what
+and how it has to be verified and what has to be produced as evidence. She will
+evaluate all deviations from the verification plan according to their potential
+impact and risk and communicate all deviations to the change management. The VER
+records all outcomes of the verification activities and will produce the
+verification report.
+
+In openETCS the VER will also be responsible to specify the aspects and tools
+for formal verification where possible. She will also specify the means to
+document the results of formal verification in the terms of the informal system
+specification.
+
 \subsubsection{Integrator (INT)}
 \label{sec:integrator}
+
+The main task of the INT is the test of the integration developed SW into the
+target HW based on the design specification. She will specify the necessary
+integration sequence, the necessary input components and the expected resulting
+components. The INT will record any deviation from the integration test
+specification, communicate them the change management and produce a system
+integration report of the overall outcome.
+
+In openETCS the INT will test the correct integration of the developed software
+at least for an openETCS simulator. The developed SW will have its
+complete API to the EVC HW specified, but there will not necessarily exist a
+compatible vendor implementation thereof. If such an implementation exists, then
+the integration test shall be done using it.
 
 \subsubsection{Validator (VAL)}
 \label{sec:validator}
 
+The main task of the VAL is to ensure that the software requirements meet the
+intended usage in the specified application area and environment. For this she
+will develop an understanding of the system and its intended environment. She
+will then review the developed SW against the SW specification, evaluate the
+conformity of the development process to the standard and the assigned SIL. She
+will review the correctness, consistency and adequacy of the verification,
+testing, test cases and executed tests, as well as ensuring that the validation
+plan was carried out completely.
+
+Based on these analyses she will review the deviations, classify them in terms
+of risk, communicate them to the change management and will give a
+recommendation on the suitability of the developed SW for the intended task, as
+well as indicate necessary constraints.
+
+She will audit and review the overall project wrt. generic development process,
+in particular verify the traceability of all SW requirements. She will ensure
+that all remaining non-conformities are resolved directly or by risk control /
+transfer measures. Finally the TST will produce a validation report and give her
+agreement or disagreement for the release of the SW.
+
+The produced documents will be transmitted to the assessor.
+
+In openETCS and important task of the VAL will be the evaluation of the open
+Proof approach for the development and verification of safety critical systems.
+
 \subsubsection{Assessor (ASR)}
 \label{sec:assessor}
 
+The main task of the ASR is to develop an assessment plan which is communicated
+to the safety authority and the client. The ASR will develop an understanding of
+the system and its intended environment and will evaluate the competency of the
+project staff and the organization, the verification and validation with their
+supporting evidence, the quality management of the development process and the
+configuration and change management with its evidence of use and application.
+
+She will identify and evaluate the risk of the deviations from the SW
+specification, produce an assessment report and ensure that the assessment plan
+is executed. She will carry out audits and inspections of the overall
+development process and give a professional view on the fitness of the developed
+SW for he intended use. Based on this she will produce an assessment report and
+record there her findings of the assessment process.
+
+The ASR must be independent of the developing organization, so this must be kept
+in mind when appointing her.
+
 \subsubsection{Project Manager (PM)}
 \label{sec:project-manager}
+
+The main task of the project manager is to ensure the independence of the roles
+and organizations as specified in CENELEC EN 50128 (see
+Figure~\ref{fig:preferred-roles}). She shall be responsible to allocate the
+necessary resources, ensure the competency for the allocated rules and allow
+sufficient time for the proper implementation of all required tasks. The PM
+shall ensure that safety requirements of other stakeholders are met and is
+responsible for the delivery and deployment of the SW. She will endorse safety
+deliverables and will ensure sufficient records and the traceability of
+requirements for safety related decisions.
+
+In openETCS, the PM will decide and allocate the roles for the development
+process. She will also identify all safety related stakeholders who in this case
+are responsible to extract the safety relevant properties from the system
+requirements specification.
 
 \subsubsection{Configuration Manager}
 \label{sec:conf-manag}
