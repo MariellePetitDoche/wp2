@@ -1,4 +1,18 @@
 
+This section describes some of the main aspects of the software development
+process and software lifecycle as specified in CENELEC EN 50128 and discusses
+some potential issues with the implementation using agile methods like SCRUM.
+
+In the openETCS proposal, it was decided to use the V-model for development
+(V2.2 Section 3.4.3), as shown in CENELEC EN 50128 Figure~4
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=.9\textwidth]{V-Model}
+  \caption{General Development Lifecycle as in CENELEC}
+  \label{fig:develop-lifecycle-cenelec}
+\end{figure}
+
 \subsection{Objectives}
 \label{sec:objectives}
 
@@ -29,7 +43,7 @@ will be mandatory for the development process.
 
 \begin{figure}[ht]
   \centering
-  \includegraphics[width=.9\textwidth]{CenelecRoles}
+  \includegraphics[width=\textwidth]{CenelecRoles}
   \caption{Preferred Organisational Roles}
   \label{fig:preferred-roles}
 \end{figure}
@@ -70,8 +84,8 @@ other.
 
 For each of the generated documents, the traceability must be assured by
 referencing all other concerned documents and by specifying unique reference
-numbers. Just as consistency, this traceability is a very important aspect which
-is often not a concern in more general software development processes.
+numbers. Just like consistency, this traceability is a very important aspect
+which is often not a concern in more general software development processes.
 
 
 \subsection{Quality Assurance}
@@ -79,7 +93,27 @@ is often not a concern in more general software development processes.
 
 The SW development according to CENELEC EN 50128 requires parallel quality
 assurance procedures. This will be well implementable using agile development
-which uses several techniques to assure the quality of the results.
+which uses several techniques to assure the quality of the results. The test
+driven approach and the unit tests used by agile methods, as well as techniques
+for increasing code quality like continuous build and pair programming shall be
+encouraged.
+
+\subsection{Conclusion}
+\label{sec:conclusion}
+
+Some requirements of the CENELEC EN 50128 norm do not allow to apply an agile
+software development process directly. Agile methods are conducted in close
+cooperation with the client, they use ``user-stories'', work in very short
+iteration and have only few required roles.
+
+To use agile methods in safety critical development, the  process shall be
+adapted to the requirements. The roles shall be defined differently, in
+particular the necessary separation of roles, the user-stories shall be an
+equivalent of he requirements of the SRS and all results of the short term
+iterations must be verified for their consistency wrt. the documentation and the
+documentation must be changed accordingly.
+
+
 
 
 %% some ideas of agile in safety critical development:
