@@ -1,7 +1,7 @@
 
 The development process for openETCS shall closely follow the V-Model process
-presented in CENELEC EN 50128 Figure~4. It is separated into different distinct phases
-which allow for iteration in the phases and between the phases. The
+presented in CENELEC EN 50128 Figure~4. It is separated into different distinct
+phases which allow for iteration in the phases and between the phases. The
 participating roles in the software development process are defined in CENELEC
 EN 50128 Figure~2.
 
@@ -121,10 +121,9 @@ well as indicate necessary constraints.
 She will audit and review the overall project wrt. generic development process,
 in particular verify the traceability of all SW requirements. She will ensure
 that all remaining non-conformities are resolved directly or by risk control /
-transfer measures. Finally the TST will produce a validation report and give her
-agreement or disagreement for the release of the SW.
-
-The produced documents will be transmitted to the assessor.
+transfer measures. Finally the VAL will produce a validation report and give her
+agreement or disagreement for the release of the SW. The produced documents will
+be transmitted to the assessor.
 
 In openETCS and important task of the VAL will be the evaluation of the open
 Proof approach for the development and verification of safety critical systems.
@@ -167,9 +166,20 @@ process. She will also identify all safety related stakeholders who in this case
 are responsible to extract the safety relevant properties from the system
 requirements specification.
 
-\subsubsection{Configuration Manager}
+\subsubsection{Configuration Manager (CM)}
 \label{sec:conf-manag}
 
+The main task of the CM is the responsibility for the SW configuration
+management plan. She owns the configuration management system and ensures the
+clear identification and independent versioning of the SW components. The CM
+shall prepare Release Notes for the SW and document incompatible components if
+applicable.
+
+In openETCS, a large part of the configuration management, in paticular the SW
+versioning, shall be done using the github system. The CM shall be responsible
+for the allocation of the pull-requests according to the agreed roles. She shall
+inspect and ensure the correct agreed granularity of patches, the agreed
+documentation and coding style in the central repositories.
 
 \subsection{Lifecycle Phases}
 \label{sec:lifecycle-phases}
