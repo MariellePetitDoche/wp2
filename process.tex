@@ -4,7 +4,7 @@ process and software lifecycle as specified in CENELEC EN 50128 and discusses
 some potential issues with the implementation using agile methods like SCRUM.
 
 In the openETCS proposal, it was decided to use the V-model for development
-(V2.2 Section 3.4.3), as shown in CENELEC EN 50128 Figure~4
+(V2.2 Section 3.4.3), as shown in CENELEC EN 50128 Figure~4.
 
 \begin{figure}[ht]
   \centering
@@ -16,20 +16,11 @@ In the openETCS proposal, it was decided to use the V-model for development
 \subsection{Objectives}
 \label{sec:objectives}
 
-The two most important goals of the CENELEC EN 50128 standard are the separation
-of the lifecycle into well-defined phases and to produce and record all
-documentation of the development process. In addition, the standard specifies
-some important constrains which must be fulfilled by a development
-process. These constraints mainly result from the application in safety critical
-domains.
-
-Naturally, the document-centric nature and the additional constraints are not
-necessarily fulfilled by generic software development processes which have been
-developed for non-critical domains. In particular for agile development
-processes like SCRUM, an adaptation in some aspects will be
-required. In openETCS the development process will be less  focused on
-extracting the real wishes from the client from user-stories, but on finding the
-intended semantics of the ERTMS specification.
+The two most important goals of the SW development lifecycle model of CENELEC EN
+50128 standard are the separation of the lifecycle into well-defined phases and
+the focus on the production and recording of all documentation of the
+development process. In addition, the standard specifies some important
+constrains which must be fulfilled.
 
 \subsection{Organisational Structure and Roles}
 \label{sec:organ-struct-roles}
@@ -98,28 +89,22 @@ driven approach and the unit tests used by agile methods, as well as techniques
 for increasing code quality like continuous build and pair programming shall be
 encouraged.
 
-\subsection{Conclusion}
-\label{sec:conclusion}
+\subsection{Support Tool Usage}
+\label{sec:tool-usage}
 
-Some requirements of the CENELEC EN 50128 norm do not allow to apply an agile
-software development process directly. Agile methods are conducted in close
-cooperation with the client, they use ``user-stories'', work in very short
-iteration and have only few required roles.
+Tools to support the development process are classified into three different
+classes: T1 for tools which generate no output which any direct or indirect
+effect on the resulting code, T2 for tools which support test or verification of
+designs or executable code where the tool may fail to indicate errors but cannot
+influence the executable code and T3 for tools which may directly or indirectly
+influence the code or data of the SW for the safety related system.
 
-To use agile methods in safety critical development, the  process shall be
-adapted to the requirements. The roles shall be defined differently, in
-particular the necessary separation of roles, the user-stories shall be an
-equivalent of he requirements of the SRS and all results of the short term
-iterations must be verified for their consistency wrt. the documentation and the
-documentation must be changed accordingly.
+The selected tools shall be able to cooperate in the sense that the output of
+one tool is usable as input for another tool. The usage of tools of the classes
+T2 and T3 must be justified by giving evidence that erroneous can be
+detected. It is possible to replace manual tasks by automatization using tools,
+in this case evidence for the appropriateness of the tools must be delivered.
 
-
-
-
-%% some ideas of agile in safety critical development:
-%% see open-DO project, presentation Peter Gardner from AdaCore
-%% www.open-do.org
-%%
 
 %%% Local Variables:
 %%% mode: latex
