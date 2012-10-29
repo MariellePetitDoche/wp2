@@ -12,6 +12,8 @@
 *.dvi
 *.pdf
 *.ps
+*.bbl
+*.blg
 auto/*
 /README.md
 /sample_article.log

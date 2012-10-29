@@ -1,9 +1,8 @@
 
-The development process for  shall closely follow the V-Model process
-presented in CENELEC EN 50128 Figure~4. It is separated into different distinct
-phases which allow for iteration in the phases and between the phases. The
-participating roles in the software development process are defined in CENELEC
-EN 50128 Figure~2.
+The development process shall follow the V-Model process presented in CENELEC EN
+50128 Figure~4. It is separated into different distinct phases which allow for
+iteration in the phases and between the phases. The participating roles in the
+software development process are defined in CENELEC EN 50128 Figure~2.
 
 \subsection{Participating Roles}
 \label{sec:participating-roles}
@@ -136,9 +135,11 @@ applicable.
 \subsection{Documents / Plans}
 \label{sec:documents--plan}
 
-The PM shall decide the allocation of the roles to the participants, according
-to the requirements of the standard and the knowledge and competence of the
-participants.
+For compliance with the standard, a certain number of plans are agreed in the SW
+planning phase. These plans shall be used and updated in all development
+phases. The PM shall decide the allocation of the roles to the participants,
+according to the requirements of the standard and the knowledge and competence
+of the participants.
 
 The allocated roles will then proceed to produce the required plans according to
 CENELEC EN 50128:
@@ -152,13 +153,20 @@ CENELEC EN 50128:
 \end{itemize}
 
 
-
 \subsection{Lifecycle Phases}
 \label{sec:lifecycle-phases}
 
-The first task is to decide a development process, the recommended lifecycle
-model in CENELEC EN 50128  is the V-model which shown in
-Figure~\ref{fig:develop-lifecycle-cenelec}, it consists of the following phases:
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=.9\textwidth]{V-Model}
+  \caption{General Development Lifecycle~\cite{EN-50128}}
+  \label{fig:develop-lifecycle-cenelec}
+\end{figure}
+
+The recommended SW development lifecycle model in CENELEC EN 50128 is the
+V-model as shown in Figure~\ref{fig:develop-lifecycle-cenelec}. It consists of
+the SW planning phase in the beginning, the SW assessment phase at the end and
+the following development phases:
 
 \begin{itemize}
 \item System Development Phase
@@ -177,14 +185,29 @@ Figure~\ref{fig:develop-lifecycle-cenelec}, it consists of the following phases:
   \end{itemize}
 \end{itemize}
 
-Each of the SW development phases shall have an analogous test / validation
-phase
+Each of the SW development phases shall have an appropriate test / validation
+counterpart, as illustrated in the V form of the lifecycle. The implementation
+of this generic process shall in particular focus on the usage of formal
+methods. This has the following primary objectives:
+
+\begin{itemize}
+\item Increase the quality of the product wrt. safety
+\item Allow for early discovery of errors in specifications
+\item Replacement of manual steps by automatic transformations with proven
+  properties
+\end{itemize}
+
 
 \subsection{System Development Phase}
 \label{sec:syst-devel-phase}
 
-The system development phase is finished externally and consists the creation of
-the ERTMS/ETCS specification as the SRS of Subset 26.
+{\bf Objective:} In the system development phase, the requirements of the system
+and its safety requirements shall be formalized. There shall also be a
+description of the overall system architecture, preferably in a suitable
+graphical modeling language like SysML, forming the basis for a model-driven
+engineering approach. Such a model can be refined in the later phases, e.g.,
+with a behavioral model. It may serve for documentation purpose, can provide
+requirements traceability
 
 \subsection{SW Development Phase}
 \label{sec:sw-development-phase}
