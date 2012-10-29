@@ -225,8 +225,14 @@ Any discovered deviation shall be documented. The documented deviation shall
 then be used to enhance the informal system specification, either by removing
 inconsistencies or ambiguities from the specification.
 
-{\bf Documents:} The document to produce in this phase is the system safety plan
-which explains the overall approach to ensure safety in the developed system.
+{\bf Documents:} The documents to produce in this phase are the system safety
+plan, the system requirements specification, the system architecture description
+and the Software / Hardware interface definition. The system safety plan
+explains the overall approach to ensure safety in the developed system. The
+system requirements specification describes all requirements of the system in a
+formal language. This phase shall also produce the system architecture
+specification and SW / HW interface definition which specify how the SW and the
+HW interact and where the boundary between the two is.
 
 {\bf Detailed Description:}
 
@@ -235,16 +241,34 @@ which explains the overall approach to ensure safety in the developed system.
 \subsection{SW Development Phase}
 \label{sec:sw-development-phase}
 
-The formalization of the informal requirements of the SRS will be part of the
-openETCS project, in particular for the open Proof approach. Any problems found
-in the SRS in the formalization and verification of the informal requirements
-for the SW development phases will be documented and communicated {\bf
-  whom?}. %TODO
-
 \subsubsection{SW Requirements Phase}
 \label{sec:sw-requ-phase}
 
+{\bf Objective:} In this phase, all the SW requirements shall be formalized,
+based on the results of the preceding phase, i.e., the formal system
+requirements, the formal safety requirements and the system architecture
+specification. If available, the part of the system architecture  model
+concerning the software will be further refined to ensure traceability of the
+software requirements.
 
+{\bf Formal Methods:} The SW requirements shall be formalized in an appropriate
+formal specification language. In the software requirements phase, this will be
+a rather high level modeling of the properties. If available, the requirements
+shall be referenced in the part concerning SW of the refined system architecture
+model.
+
+The formalization of the SW requirements shall be used to ensure their internal
+consistency and its correctness and completeness wrt. the system requirements
+and the safety requirement specification.
+
+The SW requirements specification shall list all functions which will be
+performed by the SW, identifying each safety related function. For each
+function, it will specify all required input signals and admissible values, the
+expected output and the test criteria including performance and quality aspects.
+
+{\bf Documents:} SW testing specification (see A.2)
+
+{\bf Responsable:} RQM
 
 \paragraph{Tasks}
 \label{sec:tasks}
