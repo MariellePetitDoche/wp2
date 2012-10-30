@@ -286,8 +286,54 @@ verification of the SW requirements specification wrt. the criteria specified in
 
 {\bf Responsible:} RQM
 
+{\bf Detailed Description:}
+
+{\Huge\bf TODO}
+
 \subsubsection{SW Architecture and Design Phase}
 \label{sec:sw-arch-design}
+
+{\bf Objectives:} In this phase a SW architecture shall be developed which
+allows to meet the SW requirements and the necessary safety requirements. In
+this phase there shall also be an evaluation of the HW / SW interaction, its
+influence on the safety aspects of the system and the valuation of the usage of
+already existing SW. It shall also ensure the testability of the resulting SW,
+in particular by minimizing the complexity and size of the safety relevant
+parts.
+
+{\bf Formal Methods:} This phase shall develop a formal description of all SW
+interfaces; those between different SW components and between developed SW and
+already existing SW. This shall include pre- and postconditions, boundary
+values, the behavior if those conditions are not met, memory allocation
+etc. (for a full list see 7.3.4.19) ($\rightarrow$ Software interface
+specification).
+
+The architecture and design phase shall develop the description of the SW
+components which will be developed. The exiting formal SW model will therefore
+be refined to the SW components of the architecture. The SW requirements and
+safety requirements will be refined to requirements for the components and the
+necessary SIL for each components shall be identified. It shall be formally
+verified, that the SW requirements for the components are consistent wrt. global
+SW requirements and the safety requirements. ($\rightarrow$ Software design
+specification).
+
+For the later integration of the software, a formal behavior model of the system
+into which the SW will be integrated shall be developed. The behavioral model of
+the earlier phases shall be refined and it shall be verified that the SW behaves
+as expected wrt. system into which it will be integrated. Any deviation of this
+behavior shall be documented and integrated into the software integration
+test specification as test-case.
+
+{\bf Documents:} In this phase many documents will be produced. Apart from the
+specifications for the SW architecture, the SW design and the SW interface,
+there shall also be the specification for the SW integration test and for the SW
+/ HW integration test. Finally the SW architecture and design verification
+report will document whether this phase has been finished in accordance with
+CENELEC EN 50128.
+
+{\bf Responsible:} DES, VER, INT
+
+{\Huge \bf Detailed Description:}
 
 
 
