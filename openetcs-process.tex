@@ -333,10 +333,62 @@ CENELEC EN 50128.
 
 {\bf Responsible:} DES, VER, INT
 
-{\Huge \bf Detailed Description:}
+{\bf Detailed Description:}
 
+{\Huge \bf TODO}
 
+\subsubsection{Software Component Design Phase}
+\label{sec:softw-comp-design}
 
+{\bf Objectives:} This phase shall develop a low level specification for each of
+the SW components which is correct wrt. requirements of the SW design
+specification and of the SW component design specification.
+
+{\bf Formal Methods:} This phase shall make the most elaborate use of formal
+methods in the development process. The formal model describing the system shall
+be further refined until the SW component level.
+
+Together with the specification of the various interfaces, the pre- and
+postconditions, the algorithms to use and the description of the data
+structures, a formal model shall be produced. This model shall be expressed in
+an appropriate formalism for which an appropriate tool exists such that the SW
+and safety requirements can be proven and the actual source code can be
+generated automatically.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=.9\textwidth]{V-Model-abk}
+  \caption{Formal Proof and Automatic Code Generation in V-Model}
+  \label{fig:proof-code-generation}
+\end{figure}
+
+This approach will allow to replace the manual steps of component Implementation
+and component testing with unit-tests. The formal proofs will ensure correctness
+of the generated code wrt. specification, therefore making testing
+superfluous. The outline of this is shown in
+Figure~\ref{fig:proof-code-generation}.
+
+According to CENELEC EN 50128, the approach and applied tools must be
+appropriate according to 6.7.4.4. There will be several iterative steps until
+the SW component specification will be refined enough to be eligible to
+automatic code generation. A suitable formalism for this approach would be the
+Event-B framework which supports formal proof of properties, supports iterative
+refinement and support refinement proof. It is integrated into the Rodin
+platform and has been used to develop SW with high SIL before, therefore meeting
+the requirements of CENELEC EN 50128.
+
+{\bf Documents:} In this phase, the produced document will be the formal
+refinement and verification report created by formally proving. This shall
+describe the proof steps, the refinements and the necessary lemmas to prove the
+properties and the refinements. The document shall also include the necessary
+justifications to replace the manual step of SW component implementation and SW
+component unit tests.
+
+{\bf Responsible:} DES, VER
+
+{\bf Detailed Description:}
+
+{\Huge \bf TODO}
 
 %%% Local Variables:
 %%% mode: latex
