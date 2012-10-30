@@ -11,7 +11,7 @@ Each of the participants must be noted and her name and role recorded. Which
 role can be taken by the same person is regulated as shown in
 Figure~\ref{fig:preferred-roles}.
 
-\subsubsection{Requirements Maganger (RQM)}
+\subsubsection{Requirements Manager (RQM)}
 \label{sec:requ-magang-rqm}
 
 The main task of the RQM is to take care of the software requirements. She will
@@ -247,9 +247,9 @@ HW interact and where the boundary between the two is.
 {\bf Objective:} In this phase, all the SW requirements shall be formalized,
 based on the results of the preceding phase, i.e., the formal system
 requirements, the formal safety requirements and the system architecture
-specification. If available, the part of the system architecture  model
-concerning the software will be further refined to ensure traceability of the
-software requirements.
+specification. The part of the system model concerning the software will further
+be refined, ensuring traceability of the software requirements. Any constraints
+of the constraints between HW and SW will be taken into account.
 
 {\bf Formal Methods:} The SW requirements shall be formalized in an appropriate
 formal specification language. In the software requirements phase, this will be
@@ -266,29 +266,29 @@ performed by the SW, identifying each safety related function. For each
 function, it will specify all required input signals and admissible values, the
 expected output and the test criteria including performance and quality aspects.
 
-{\bf Documents:} SW testing specification (see A.2)
+A formal model of the behavior of the programmable electronic hardware shall be
+established. This model shall in particular describe the modes, the transitions
+between the modes and shall include the failure behavior. The correctness of
+this model according to the safety specification shall be verified with
+appropriate formal verification techniques. Any deviation of the behavior shall
+be documented and fixed in a succeeding iteration. The documented deviations
+shall be used as test cases in the SW test specification.
 
-{\bf Responsable:} RQM
+{\bf Documents:} The documents to produce in this phase are the SW testing
+specification and the SW requirements verification report. The SW testing
+specification (see 6.2, A.5) will provide the detailed approach to test the
+developed SW, concertizing the approach in the SW testing plan. This shall
+provide the information where formal verification will be used, in particular
+where formal techniques like proofs will replace testing of the developed SW.
+The SW requirements verification report will document the results of the
+verification of the SW requirements specification wrt. the criteria specified in
+7.2.4.22 of CENELEC EN 50128.
 
-\paragraph{Tasks}
-\label{sec:tasks}
-\begin{itemize}
-\item Formalization of the system specification
-\item Formalization of the safety requirements of the system
-\item Specification of the necessary tests and formal verification tasks
-\end{itemize}
-
-\paragraph{Reports}
-\label{sec:sw-req-report}
-\begin{itemize}
-\item SW requirements verification report
-\end{itemize}
+{\bf Responsible:} RQM
 
 \subsubsection{SW Architecture and Design Phase}
 \label{sec:sw-arch-design}
 
-\paragraph{Tasks}
-\label{sec:tasks-1}
 
 
 
