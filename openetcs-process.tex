@@ -390,6 +390,82 @@ component unit tests.
 
 {\Huge \bf TODO}
 
+\subsubsection{Software Component Implementation Phase}
+\label{sec:softw-comp-impl}
+
+Shall be replaced by automatic code generation from formal models using
+refinement techniques.
+
+\subsubsection{Software Component Testing Phase}
+\label{sec:softw-comp-test}
+
+Shall be replaced by giving formal proofs of the generated code and showing the
+adherence to all SW and safety requirements by the formal model.
+
+\subsubsection{Software Integration Phase}
+\label{sec:softw-integr-phase}
+
+{\bf Objectives:} This phase shall demonstrate the correct functioning of the
+combination of the developed SW components, in particular in their target HW
+environment. The necessary tests for this phase are specified in the SW / HW
+integration specification test and SW integration test specification.
+
+{\bf Formal Methods:} Any deviation which is found in this phase shall be
+documented. The results of this phase shall be used to refine the formal models
+if necessary, in particular the formal models of the HW.
+
+{\bf Documents:} The SW integration test report shall document the results from
+the integration of the SW, the SW / HW integration report the results from the
+integration of the developed SW on the target HW. Both shall include the test
+cases, their respective results and document all details of the configuration
+for the tests. The SW integration verification report shall document whether the
+test reports have been written according to their respective specifications and
+adhere to the relevant parts of CENELEC EN 50128 for test reports.
+
+{\bf Responsible:} INT, VER
+
+\subsubsection{Overall Testing / Final Validation}
+\label{sec:overall-testing-}
+
+{\bf Objectives:} The objective of this phase is to validate the adequacy of the
+developed SW and its integration wrt. system requirements specification, the
+functional properties and the safety related properties of the system according
+to the SIL. In this phase the overall fitness for purpose of the system will be
+evaluated.
+
+{\bf Formal Methods:} This phase is executed by the VAL who will validate the
+developed system. In particular, she will analyze whether the chosen combination
+of techniques are appropriate wrt. CENELEC EN 50128, e.g., the use of formal
+proofs in phase~\ref{sec:softw-comp-design} to replace
+phases~\ref{sec:softw-comp-impl} and~\ref{sec:softw-comp-test}.
+
+{\bf Documents:} The VAL will write the overall SW test report in which the VAL
+will document the results of additional tests she specified and executes herself
+or lets TST execute them. The VAL will also produce a SW validation report which
+shall document the results of the SW validation plan. The VAL will also produce
+a release note which shall document any restriction of the usage of the
+developed software.
+
+{\bf Responsible:} VAL
+
+
+\subsection{Conclusion}
+\label{sec:conclusion-fm-process}
+
+The focus on the application of formal methods in the proposed development
+process should lead to an increased quality and reduced cost. In particular,
+formal methods will support the early detection and elimination of design flaws
+through the in-phase iterations. Early error detection can greatly reduce the
+cost, in particular for safety relevant SW development, by avoiding to have to
+redo several test and validation steps.
+
+The envisioned automatic code generation by refinement will formally proof the
+correctness of the resulting SW wrt. its specification. This will increase the
+quality of the resulting code, as well as eliminate the need for verification of
+adherence to coding standards and for unit tests of SW components.
+
+
+
 %%% Local Variables:
 %%% mode: latex
 %%% TeX-master: "wp-2.2"
