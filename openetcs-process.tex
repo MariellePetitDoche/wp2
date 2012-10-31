@@ -1,8 +1,8 @@
 
-The development process shall follow the V-Model process presented in CENELEC EN
-50128 Figure~4. It is separated into different distinct phases which allow for
-iteration in the phases and between the phases. The participating roles in the
-software development process are defined in CENELEC EN 50128 Figure~2.
+The participating roles in the software development process are defined in
+CENELEC EN 50128 Figure~2 (see Figure~\ref{fig:preferred-roles}. In the
+following all references to ``the standard'' will refer to CENELEC EN
+50128:2011~\cite{EN-50128}.
 
 \subsection{Participating Roles}
 \label{sec:participating-roles}
@@ -107,21 +107,17 @@ development process and give a professional view on the fitness of the developed
 SW for he intended use. Based on this she will produce an assessment report and
 record there her findings of the assessment process.
 
-The ASR must be independent of the developing organization, so this must be kept
-in mind when appointing her.
-
 \subsubsection{Project Manager (PM)}
 \label{sec:project-manager}
 
 The main task of the project manager is to ensure the independence of the roles
-and organizations as specified in CENELEC EN 50128 (see
-Figure~\ref{fig:preferred-roles}). She shall be responsible to allocate the
-necessary resources, ensure the competency for the allocated rules and allow
-sufficient time for the proper implementation of all required tasks. The PM
-shall ensure that safety requirements of other stakeholders are met and is
-responsible for the delivery and deployment of the SW. She will endorse safety
-deliverables and will ensure sufficient records and the traceability of
-requirements for safety related decisions.
+and organizations as specified in CENELEC EN 50128. She shall be responsible to
+allocate the necessary resources, ensure the competency for the allocated rules
+and allow sufficient time for the proper implementation of all required
+tasks. The PM shall ensure that safety requirements of other stakeholders are
+met and is responsible for the delivery and deployment of the SW. She will
+endorse safety deliverables and will ensure sufficient records and the
+traceability of requirements for safety related decisions.
 
 \subsubsection{Configuration Manager (CM)}
 \label{sec:conf-manag}
@@ -132,7 +128,7 @@ clear identification and independent versioning of the SW components. The CM
 shall prepare Release Notes for the SW and document incompatible components if
 applicable.
 
-\subsection{Documents / Plans}
+\subsection{Software Planning Phase}
 \label{sec:documents--plan}
 
 For compliance with the standard, a certain number of plans are agreed in the SW
@@ -158,7 +154,7 @@ CENELEC EN 50128:
 
 \begin{figure}[ht]
   \centering
-  \includegraphics[width=.9\textwidth]{V-Model}
+  \includegraphics[width=\textwidth]{V-Model}
   \caption{General Development Lifecycle~\cite{EN-50128}}
   \label{fig:develop-lifecycle-cenelec}
 \end{figure}
@@ -175,8 +171,8 @@ the following development phases:
   \item SW Requirements Phase
   \item SW Architecture and Design Phase
   \item SW Component Design Phase
+  \item SW Component Implementation Phase
   \end{itemize}
-\item SW Component Implementation Phase
 \item SW Test / Validation Phases
   \begin{itemize}
   \item SW Validation Phase
@@ -192,11 +188,13 @@ methods. This has the following primary objectives:
 
 \begin{itemize}
 \item Increase the quality of the product wrt. safety
-\item Allow for early discovery of errors in specifications
+\item Allow for early discovery of errors in the  specifications
 \item Replacement of manual steps by automatic transformations with proven
   properties
 \end{itemize}
 
+For each of the development phases of the lifecycle model of the standard, we
+will propose how formal methods can be used.
 
 \subsection{System Development Phase}
 \label{sec:syst-devel-phase}
@@ -204,10 +202,11 @@ methods. This has the following primary objectives:
 {\bf Objective:} In the system development phase, the requirements of the system
 and its safety requirements shall be formalized. There shall also be a
 description of the overall system architecture, preferably in a suitable
-graphical modeling language like SysML, forming the basis for a model-driven
-engineering approach. Such a model can be refined in the later phases, e.g.,
-with a behavioral model. It may serve for documentation purpose, can provide
-requirements traceability.
+graphical modeling language\footnote{e.g. SysML~\cite{SysMLSpec}}, forming the
+basis for a model-driven engineering approach. Such a model shall be refined in
+the later phases, e.g., with a behavioral model. It shall serve for
+documentation purposes, provide requirements traceability and parts of it will
+be refined up to the algorithmic model of the executable code.
 
 {\bf Formal Methods:} The system requirements and the safety requirements shall
 be formalized in appropriate formal languages. In the system development phase,
@@ -219,20 +218,22 @@ The formalization of the requirements allows for the verification of
 consistency, i.e., non-contradiction of the properties. This can be done to
 ensure the internal consistency of the system requirements and the safety
 requirements, as well as for the consistency of the system requirements
-wrt. safety requirements.
+wrt. safety requirements. Tracing of these requirements to the specification
+will ensure their completeness.
 
-Any discovered deviation shall be documented. The documented deviation shall
-then be used to enhance the informal system specification, either by removing
-inconsistencies or ambiguities from the specification.
+Any discovered deviation from the specification shall be documented. The
+documented deviation shall then be used to enhance the informal system
+specification, either by removing inconsistencies from or resolving ambiguities
+in the specification.
 
 {\bf Documents:} The documents to produce in this phase are the system safety
 plan, the system requirements specification, the system architecture description
-and the Software / Hardware interface definition. The system safety plan
+and the software / hardware interface definition. The system safety plan
 explains the overall approach to ensure safety in the developed system. The
 system requirements specification describes all requirements of the system in a
 formal language. This phase shall also produce the system architecture
 specification and SW / HW interface definition which specify how the SW and the
-HW interact and where the boundary between the two is.
+HW interact and the location of the boundary between the two.
 
 {\bf Detailed Description:}
 
@@ -244,12 +245,12 @@ HW interact and where the boundary between the two is.
 \subsubsection{SW Requirements Phase}
 \label{sec:sw-requ-phase}
 
-{\bf Objective:} In this phase, all the SW requirements shall be formalized,
+{\bf Objective:} In this phase, all the SW requirements shall be formalized
 based on the results of the preceding phase, i.e., the formal system
 requirements, the formal safety requirements and the system architecture
 specification. The part of the system model concerning the software will further
-be refined, ensuring traceability of the software requirements. Any constraints
-of the constraints between HW and SW will be taken into account.
+be refined, ensuring traceability of the software requirements. All existing
+constraints of the constraints between HW and SW will be taken into account.
 
 {\bf Formal Methods:} The SW requirements shall be formalized in an appropriate
 formal specification language. In the software requirements phase, this will be
@@ -258,8 +259,8 @@ shall be referenced in the part concerning SW of the refined system architecture
 model.
 
 The formalization of the SW requirements shall be used to ensure their internal
-consistency and its correctness and completeness wrt. the system requirements
-and the safety requirement specification.
+consistency and their correctness and completeness wrt. the system requirements
+specification and the safety requirements specification.
 
 The SW requirements specification shall list all functions which will be
 performed by the SW, identifying each safety related function. For each
@@ -282,7 +283,7 @@ provide the information where formal verification will be used, in particular
 where formal techniques like proofs will replace testing of the developed SW.
 The SW requirements verification report will document the results of the
 verification of the SW requirements specification wrt. the criteria specified in
-7.2.4.22 of CENELEC EN 50128.
+7.2.4.22 of the standard.
 
 {\bf Responsible:} RQM
 
@@ -297,13 +298,13 @@ verification of the SW requirements specification wrt. the criteria specified in
 allows to meet the SW requirements and the necessary safety requirements. In
 this phase there shall also be an evaluation of the HW / SW interaction, its
 influence on the safety aspects of the system and the valuation of the usage of
-already existing SW. It shall also ensure the testability of the resulting SW,
-in particular by minimizing the complexity and size of the safety relevant
-parts.
+already existing SW. It shall also ensure the testability and the
+appropriateness for formal proofs of the resulting SW, in particular by
+minimizing the complexity and the size of the safety relevant parts.
 
 {\bf Formal Methods:} This phase shall develop a formal description of all SW
-interfaces; those between different SW components and between developed SW and
-already existing SW. This shall include pre- and postconditions, boundary
+interfaces; those between different SW components and between newly developed SW
+and already existing SW. This shall include pre- and postconditions, boundary
 values, the behavior if those conditions are not met, memory allocation
 etc. (for a full list see 7.3.4.19) ($\rightarrow$ Software interface
 specification).
@@ -318,18 +319,18 @@ SW requirements and the safety requirements. ($\rightarrow$ Software design
 specification).
 
 For the later integration of the software, a formal behavior model of the system
-into which the SW will be integrated shall be developed. The behavioral model of
-the earlier phases shall be refined and it shall be verified that the SW behaves
-as expected wrt. system into which it will be integrated. Any deviation of this
-behavior shall be documented and integrated into the software integration
-test specification as test-case.
+into which the SW will be integrated shall be developed. To achieve this, the
+behavioral model of the earlier phases shall be refined and it shall be verified
+that the SW behaves as expected wrt. system into which it will be
+integrated. Any deviation of this behavior shall be documented and integrated
+into the software integration test specification as test-case.
 
-{\bf Documents:} In this phase many documents will be produced. Apart from the
+{\bf Documents:} In this phase the following documents shall be produced: the
 specifications for the SW architecture, the SW design and the SW interface,
 there shall also be the specification for the SW integration test and for the SW
 / HW integration test. Finally the SW architecture and design verification
 report will document whether this phase has been finished in accordance with
-CENELEC EN 50128.
+the standard.
 
 {\bf Responsible:} DES, VER, INT
 
@@ -346,39 +347,40 @@ specification and of the SW component design specification.
 
 {\bf Formal Methods:} This phase shall make the most elaborate use of formal
 methods in the development process. The formal model describing the system shall
-be further refined until the SW component level.
+be further refined up to the algorithmic description on the SW component level.
 
 Together with the specification of the various interfaces, the pre- and
 postconditions, the algorithms to use and the description of the data
-structures, a formal model shall be produced. This model shall be expressed in
-an appropriate formalism for which an appropriate tool exists such that the SW
-and safety requirements can be proven and the actual source code can be
-generated automatically.
+structures, a detailed formal model of the behavior shall be produced for each
+SW component. This model shall be expressed in an appropriate formalism for
+which an appropriate tool exists such that the SW and safety requirements can be
+proven and the actual source code can be generated automatically.
 
 \begin{figure}[ht]
   \centering
-  \includegraphics[width=.9\textwidth]{V-Model-abk}
+  \includegraphics[width=\textwidth]{V-Model-abk}
   \caption{Formal Proof and Automatic Code Generation in V-Model}
   \label{fig:proof-code-generation}
 \end{figure}
 
-This approach will allow to replace the manual steps of component Implementation
+This approach will allow to replace the manual steps of component implementation
 and component testing with unit-tests. The formal proofs will ensure correctness
 of the generated code wrt. specification, therefore making testing
 superfluous. The outline of this is shown in
-Figure~\ref{fig:proof-code-generation}.
+Figure~\ref{fig:proof-code-generation}, where the green arrow marks the proposed
+``shortcut''.
 
-According to CENELEC EN 50128, the approach and applied tools must be
+According to the standard, such an approach and the applied tools must be
 appropriate according to 6.7.4.4. There will be several iterative steps until
 the SW component specification will be refined enough to be eligible to
-automatic code generation. A suitable formalism for this approach would be the
-Event-B framework which supports formal proof of properties, supports iterative
-refinement and support refinement proof. It is integrated into the Rodin
-platform and has been used to develop SW with high SIL before, therefore meeting
-the requirements of CENELEC EN 50128.
+automatic code generation. A suitable formalism for this approach shall be a
+formal framework which supports formal proofs of properties, supports iterative
+refinement, supports refinement proofs and is suitable wrt. criteria of the
+standard\footnote{e.g. the Event-B method as integrated int the Rodin
+  tool~\cite{Abrial:Rodin}}.
 
 {\bf Documents:} In this phase, the produced document will be the formal
-refinement and verification report created by formally proving. This shall
+refinement and verification report created by the formal proofs. This shall
 describe the proof steps, the refinements and the necessary lemmas to prove the
 properties and the refinements. The document shall also include the necessary
 justifications to replace the manual step of SW component implementation and SW
@@ -408,7 +410,7 @@ adherence to all SW and safety requirements by the formal model.
 {\bf Objectives:} This phase shall demonstrate the correct functioning of the
 combination of the developed SW components, in particular in their target HW
 environment. The necessary tests for this phase are specified in the SW / HW
-integration specification test and SW integration test specification.
+integration test specification and SW integration test specification.
 
 {\bf Formal Methods:} Any deviation which is found in this phase shall be
 documented. The results of this phase shall be used to refine the formal models
@@ -420,7 +422,7 @@ integration of the developed SW on the target HW. Both shall include the test
 cases, their respective results and document all details of the configuration
 for the tests. The SW integration verification report shall document whether the
 test reports have been written according to their respective specifications and
-adhere to the relevant parts of CENELEC EN 50128 for test reports.
+adhere to the relevant parts of the standard for test reports.
 
 {\bf Responsible:} INT, VER
 
@@ -435,16 +437,16 @@ evaluated.
 
 {\bf Formal Methods:} This phase is executed by the VAL who will validate the
 developed system. In particular, she will analyze whether the chosen combination
-of techniques are appropriate wrt. CENELEC EN 50128, e.g., the use of formal
-proofs in phase~\ref{sec:softw-comp-design} to replace
-phases~\ref{sec:softw-comp-impl} and~\ref{sec:softw-comp-test}.
+of techniques are appropriate wrt. standard, e.g., the use of formal proofs in
+phase~\ref{sec:softw-comp-design} to replace phases~\ref{sec:softw-comp-impl}
+and~\ref{sec:softw-comp-test}.
 
-{\bf Documents:} The VAL will write the overall SW test report in which the VAL
-will document the results of additional tests she specified and executes herself
-or lets TST execute them. The VAL will also produce a SW validation report which
-shall document the results of the SW validation plan. The VAL will also produce
-a release note which shall document any restriction of the usage of the
-developed software.
+{\bf Documents:} The VAL will produce the overall SW test report in which the
+VAL will document the results of additional tests she specified and executes
+herself or lets TST execute them. The VAL will also produce a SW validation
+report which shall document the results of the SW validation plan. The VAL will
+also produce a release note which shall document any restriction of the usage of
+the developed software.
 
 {\bf Responsible:} VAL
 
@@ -453,17 +455,28 @@ developed software.
 \label{sec:conclusion-fm-process}
 
 The focus on the application of formal methods in the proposed development
-process should lead to an increased quality and reduced cost. In particular,
-formal methods will support the early detection and elimination of design flaws
-through the in-phase iterations. Early error detection can greatly reduce the
-cost, in particular for safety relevant SW development, by avoiding to have to
-redo several test and validation steps.
+process will lead to an increased quality and reduced development cost. In
+particular, formal methods will support the early detection and elimination of
+design flaws through rigorous formal analysis in the in-phase iterations. Early
+error detection can greatly reduce the cost, in particular for safety relevant
+SW development, by avoiding to have to redo several test and validation steps.
 
 The envisioned automatic code generation by refinement will formally proof the
 correctness of the resulting SW wrt. its specification. This will increase the
 quality of the resulting code, as well as eliminate the need for verification of
 adherence to coding standards and for unit tests of SW components.
 
+The proposed model-driven approach with model refinement will facilitate the
+production of documentation and traceability of the requirements according to
+the requirements of the standard. An important aspect to implement this approach
+is the application of an appropriate supporting tool chain, in particular with
+exchangeable file formats for the respective models.
+
+A prime candidate for this is the Eclipse platform, which is well extensible and
+provides support for XML based file exchange formats. It is also the basis for
+model-based development tools like Topcased, provides integration for
+requirements engineering tools like ProR and forms the basis for the formal
+proof tool Rodin.
 
 
 %%% Local Variables:
