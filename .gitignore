@@ -14,6 +14,8 @@
 *.ps
 *.bbl
 *.blg
+*.log
+_region*
 auto/*
 /README.md
 /sample_article.log
