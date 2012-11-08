@@ -258,7 +258,7 @@ more detail.
 \end{figure}
 
 The first phase is the formalization of the safety requirements, this it
-iterated until internal consistency is achieved. The next phase is the
+iterated until internal consistency is ensured. The next phase is the
 formalization of the system requirements, analogously with an iteration to
 ensure their consistency.
 
@@ -271,15 +271,14 @@ completeness shall be documented and the phases reiterated until consistency and
 completeness is achieved.
 
 
-
 \subsection{SW Development Phase}
 \label{sec:sw-development-phase}
 
 \subsubsection{SW Requirements Phase}
 \label{sec:sw-requ-phase}
 
-{\bf Objective:} In this phase, all the SW requirements shall be formalized
-based on the results of the preceding phase, \ie, the formal system
+{\bf Objective:} In this phase, the SW requirements shall be described and
+formalized based on the results of the preceding phase, \ie, the formal system
 requirements, the formal safety requirements and the system architecture
 specification. The part of the system model concerning the software will further
 be refined, ensuring traceability of the software requirements. All existing
@@ -287,9 +286,10 @@ constraints of the constraints between HW and SW will be taken into account.
 
 {\bf Formal Methods:} The SW requirements shall be formalized in an appropriate
 formal specification language. In the software requirements phase, this will be
-a rather high level modeling of the properties. If available, the requirements
-shall be referenced in the part concerning SW of the refined system architecture
-model.
+a rather high level modeling of the properties, similar to the system
+requirements specification. The part of the system architecture model which
+concerns the SW implementation of the system shall be refined and the SW
+requirements shall be referenced in it.
 
 The formalization of the SW requirements shall be used to ensure their internal
 consistency and their correctness and completeness wrt. the system requirements
@@ -322,7 +322,33 @@ verification of the SW requirements specification wrt. the criteria specified in
 
 {\bf Detailed Description:}
 
-{\Huge\bf TODO}
+Figure~\ref{fig:detailed-sw-dev-phase} shows the sub-phases of the SW
+requirements phase.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=.35\textwidth]{SW-Req-Phase-Details}
+  \caption{Sub Process in SW Development Phase}
+  \label{fig:detailed-sw-dev-phase}
+\end{figure}
+
+The first phase consists of the description and formalization of the SW
+requirements. The system architecture model from the preceding phase shall be
+extended with a model of the SW. All SW requirements shall be referenced in that
+model. The internal consistency of the SW requirements shall be verified with an
+appropriate formal verification tool, any inconsistency shall be
+documented. This shall be iterated until consistency of the SW requirements is
+achieved.
+
+In the next phase a formal behavioral model of the programmable electronic HW is
+produced which includes in particular the desired behavior in case of
+failures.
+
+The SW requirements together with the HW model are combined in an appropriate
+formal specification  and the consistency and correctness wrt. the system
+requirements and the safety requirements shall be verified formally. The
+deviations shall be documented. They shall be fixed in the next in-phase
+iteration.
 
 \subsubsection{SW Architecture and Design Phase}
 \label{sec:sw-arch-design}
