@@ -203,7 +203,7 @@ methods. This has the following primary objectives:
 \end{itemize}
 
 For each of the development phases of the lifecycle model of the standard, we
-will propose how formal methods can be used.
+will propose how formal methods should be applied for openETCS.
 
 \subsection{System Development Phase}
 \label{sec:syst-devel-phase}
@@ -211,29 +211,30 @@ will propose how formal methods can be used.
 {\bf Objective:} In the system development phase, the requirements of the system
 and its safety requirements shall be formalized. There shall also be a
 description of the overall system architecture, preferably in a suitable
-graphical modeling language\footnote{e.g. SysML~\cite{SysMLSpec}}, forming the
-basis for a model-driven engineering approach. Such a model shall be refined in
-the later phases, e.g., with a behavioral model. It shall serve for
-documentation purposes, provide requirements traceability and parts of it will
-be refined up to the algorithmic model of the executable code.
+graphical modeling language\footnote{\eg, SysML~\cite{SysMLSpec}}. To exploit
+this model the most, a model-driven engineering approach shall be used, where
+the model shall be further refined in the later phases, \eg, with a detailed
+behavioral model. It shall serve for documentation purposes, provide
+requirements traceability and parts of it will be refined up to the algorithmic
+model of the executable code.
 
 {\bf Formal Methods:} The system requirements and the safety requirements shall
-be formalized in appropriate formal languages. In the system development phase,
-this will be a rather high level modeling of the properties. Where possible, the
-requirements will be referring the system architecture model to facilitate
-traceability in later phases.
+be formalized in appropriate formal specification languages. In the system
+development phase, this will be a rather high level modeling of the
+properties. Where possible, the requirements will be referring the system
+architecture model to facilitate traceability in later phases. The properties
+will be refined together with the model in later phases.
 
 The formalization of the requirements allows for the verification of
-consistency, i.e., non-contradiction of the properties. This can be done to
-ensure the internal consistency of the system requirements and the safety
-requirements, as well as for the consistency of the system requirements
-wrt. safety requirements. Tracing of these requirements to the specification
-will ensure their completeness.
+consistency, \eg, non-contradiction of the properties. This ensures the internal
+consistency of the system requirements and the safety requirements, as well as
+the consistency of the system requirements wrt. safety requirements. Tracing of
+these requirements to the specification will ensure their completeness.
 
 Any discovered deviation from the specification shall be documented. The
 documented deviation shall then be used to enhance the informal system
 specification, either by removing inconsistencies from or resolving ambiguities
-in the specification.
+in the informal requirements specification.
 
 {\bf Documents:} The documents to produce in this phase are the system safety
 plan, the system requirements specification, the system architecture description
@@ -246,7 +247,30 @@ HW interact and the location of the boundary between the two.
 
 {\bf Detailed Description:}
 
-{\Huge \bf TODO}
+Figure~\ref{fig:detailed-sys-dev-phase} describes an iteration in this phase in
+more detail.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=.5\textwidth]{System-Dev-Phase-Details}
+  \caption{Sub Process in System Development Phase}
+  \label{fig:detailed-sys-dev-phase}
+\end{figure}
+
+The first phase is the formalization of the safety requirements, this it
+iterated until internal consistency is achieved. The next phase is the
+formalization of the system requirements, analogously with an iteration to
+ensure their consistency.
+
+Both sets of requirements are combined in the requirement integration
+phase. They shall be transformed into a common formal specification format if
+necessary. The consistency of the combination is verified in the next phase and
+finally the completeness of the requirement wrt. informal specification. Any
+deviation from the consistency of the combined requirements or from the
+completeness shall be documented and the phases reiterated until consistency and
+completeness is achieved.
+
+
 
 \subsection{SW Development Phase}
 \label{sec:sw-development-phase}
@@ -255,7 +279,7 @@ HW interact and the location of the boundary between the two.
 \label{sec:sw-requ-phase}
 
 {\bf Objective:} In this phase, all the SW requirements shall be formalized
-based on the results of the preceding phase, i.e., the formal system
+based on the results of the preceding phase, \ie, the formal system
 requirements, the formal safety requirements and the system architecture
 specification. The part of the system model concerning the software will further
 be refined, ensuring traceability of the software requirements. All existing
@@ -385,7 +409,7 @@ the SW component specification will be refined enough to be eligible to
 automatic code generation. A suitable formalism for this approach shall be a
 formal framework which supports formal proofs of properties, supports iterative
 refinement, supports refinement proofs and is suitable wrt. criteria of the
-standard\footnote{e.g. the Event-B method as integrated int the Rodin
+standard\footnote{\eg, the Event-B method as integrated int the Rodin
   tool~\cite{Abrial:Rodin}}.
 
 {\bf Documents:} In this phase, the produced document will be the formal
@@ -446,7 +470,7 @@ evaluated.
 
 {\bf Formal Methods:} This phase is executed by the VAL who will validate the
 developed system. In particular, she will analyze whether the chosen combination
-of techniques are appropriate wrt. standard, e.g., the use of formal proofs in
+of techniques are appropriate wrt. standard, \eg, the use of formal proofs in
 phase~\ref{sec:softw-comp-design} to replace phases~\ref{sec:softw-comp-impl}
 and~\ref{sec:softw-comp-test}.
 
