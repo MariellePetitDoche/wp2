@@ -303,10 +303,10 @@ expected output and the test criteria including performance and quality aspects.
 A formal model of the behavior of the programmable electronic hardware shall be
 established. This model shall in particular describe the modes, the transitions
 between the modes and shall include the failure behavior. The correctness of
-this model according to the safety specification shall be verified with
-appropriate formal verification techniques. Any deviation of the behavior shall
-be documented and fixed in a succeeding iteration. The documented deviations
-shall be used as test cases in the SW test specification.
+this model according to the relevant parts of the safety specification shall be
+verified with appropriate formal verification techniques. Any deviation of the
+behavior shall be documented and fixed in a succeeding iteration. The documented
+deviations shall be used as test cases in the SW test specification.
 
 {\bf Documents:} The documents to produce in this phase are the SW testing
 specification and the SW requirements verification report. The SW testing
@@ -354,25 +354,26 @@ iteration.
 \label{sec:sw-arch-design}
 
 {\bf Objectives:} In this phase a SW architecture shall be developed which
-allows to meet the SW requirements and the necessary safety requirements. In
-this phase there shall also be an evaluation of the HW / SW interaction, its
-influence on the safety aspects of the system and the valuation of the usage of
-already existing SW. It shall also ensure the testability and the
-appropriateness for formal proofs of the resulting SW, in particular by
-minimizing the complexity and the size of the safety relevant parts.
+allows to meet the SW requirements and the necessary safety requirements without
+introducing unnecessary complexity. In this phase there shall also be an
+evaluation of the HW / SW interaction, its influence on the safety aspects of
+the system and the valuation of the usage of already existing SW. It shall also
+ensure the testability and the appropriateness for formal proofs of the
+resulting SW, in particular by minimizing the complexity and the size of the
+safety relevant parts.
 
 {\bf Formal Methods:} This phase shall develop a formal description of all SW
 interfaces; those between different SW components and between newly developed SW
 and already existing SW. This shall include pre- and postconditions, boundary
-values, the behavior if those conditions are not met, memory allocation
-etc. (for a full list see 7.3.4.19) ($\rightarrow$ Software interface
+values for all parameters, the behavior if those conditions are not met, memory
+allocation etc. (for a full list see 7.3.4.19) ($\rightarrow$ Software interface
 specification).
 
 The architecture and design phase shall develop the description of the SW
 components which will be developed. The exiting formal SW model will therefore
 be refined to the SW components of the architecture. The SW requirements and
 safety requirements will be refined to requirements for the components and the
-necessary SIL for each components shall be identified. It shall be formally
+necessary SIL for each component shall be identified. It shall be formally
 verified, that the SW requirements for the components are consistent wrt. global
 SW requirements and the safety requirements. ($\rightarrow$ Software design
 specification).
@@ -395,7 +396,39 @@ the standard.
 
 {\bf Detailed Description:}
 
-{\Huge \bf TODO}
+The details of the sub-process of the SW architecture and design phase is shown
+in Figure~\ref{fig:detailed-sw-arch-phase}.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=.5\textwidth]{SW-Arch-Phase-Details}
+  \caption{Sub Process in SW Architecture and Design Phase}
+  \label{fig:detailed-sw-arch-phase}
+\end{figure}
+
+In the first phase the interfaces of the SW to other SW and to HW shall be
+formally defined in an appropriate specification language. In particular the
+necessary pre- and postconditions, used parameters and their boundaries shall be
+described in a formal way~\footnote{\eg, in ACSL~\cite{baudin09acsl} the
+  annotation language used by Frama-C ({\tt http://frama-c.com})}
+
+The next step is to refine the SW architecture to components. The SW
+requirements specification shall be refined to these components. It shall be
+formally verified that the requirements of the components are internally
+consistent and that they are correct wrt. SW requirements specification. Any
+found deviation shall be documented and the sub-phase shall be iterated until
+consistency and correctness is achieved.
+
+The model of the programmable HW shall be further refined and be extended with a
+formal description of the system into which the SW will be integrated. This
+model shall be verified wrt. safety requirements, any deviation shall be
+documented and fixed for a later iteration of this sub-phase.
+
+The consistency of the SW component requirements specification wrt. the HW
+behavioral model shall be verified, as well as the consistency of the interface
+definition wrt. SW components and the HW parts of the system. Deviations shall
+be recorded and the sub-phase shall be iterated until consistency is reached.
+
 
 \subsubsection{Software Component Design Phase}
 \label{sec:softw-comp-design}
