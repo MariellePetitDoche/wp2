@@ -436,7 +436,7 @@ In the first phase the interfaces of the SW to other SW and to HW shall be
 formally defined in an appropriate specification language. In particular the
 necessary pre- and postconditions, used parameters and their boundaries shall be
 described in a formal way~\footnote{\eg, in ACSL~\cite{baudin09acsl} the
-  annotation language used by Frama-C ({\tt http://frama-c.com})}
+  annotation language used by Frama-C (\url{http://frama-c.com})}
 
 The next step is to refine the SW architecture to components. The SW
 requirements specification shall be refined to these components. It shall be
@@ -525,8 +525,9 @@ detailed enough to be eligible to automatic code generation. A suitable
 formalism for this approach shall be a formal framework which supports formal
 proofs of properties, supports iterative refinement, supports refinement proofs
 and is suitable wrt. criteria of the standard\footnote{\eg, the Event-B method
-  as integrated int the Rodin tool~\cite{Abrial:Rodin}}. Finally the source code
-shall be generated from the formal behavior specification.
+  as integrated int the Rodin tool~\cite{Abrial:Rodin}
+  (\url{http://www.event-b.org/})}. Finally the source code shall be generated
+from the formal behavior specification.
 
 Although automatically generated, the source code shall contain annotations for
 the pre- and postconditions and other properties, \eg, loop invariants. The
@@ -631,12 +632,26 @@ the requirements of the standard. An important aspect to implement this approach
 is the application of an appropriate supporting tool chain, in particular with
 exchangeable file formats for the respective models.
 
+Figure~\ref{fig:overview-models-process} present an overview of the generated
+models and their relation. The solid arrows in both direction indicate a formal
+verification of consistency (and correctness), the dashed arrows in one
+direction indicate a refinement. The pointed line indicate the different phases
+of the process.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=.5\textwidth]{ProcessBild}
+  \caption{Overview of Formal Models Generated in Process}
+  \label{fig:overview-models-process}
+\end{figure}
+
 A prime candidate for this is the Eclipse platform, which is well extensible and
 provides support for XML based file exchange formats. It is also the basis for
-model-based development tools like TopCASEd\footnote{http://www.topcased.org/},
-provides integration for requirements engineering tools like
-ProR\footnote{www.eclipse.org/rmf/pror/} and forms the basis for the formal
-proof tool Rodin.
+model-based development tools like
+TopCASEd\footnote{\url{http://www.topcased.org/}}, provides integration for
+requirements engineering tools like
+ProR\footnote{\url{http://www.eclipse.org/rmf/pror/}} and forms the basis for
+the formal proof tool Rodin.
 
 
 %%% Local Variables:
