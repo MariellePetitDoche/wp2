@@ -448,28 +448,6 @@ SW component. This model shall be expressed in an appropriate formalism for
 which an appropriate tool exists such that the SW and safety requirements can be
 proven and the actual source code can be generated automatically.
 
-\begin{figure}[ht]
-  \centering
-  \includegraphics[width=\textwidth]{V-Model-abk}
-  \caption{Formal Proof and Automatic Code Generation in V-Model}
-  \label{fig:proof-code-generation}
-\end{figure}
-
-This approach will allow to replace the manual steps of component implementation
-and component testing with unit-tests. The formal proofs will ensure correctness
-of the generated code wrt. specification, therefore making testing
-superfluous. The outline of this is shown in
-Figure~\ref{fig:proof-code-generation}, where the green arrow marks the proposed
-``shortcut''.
-
-According to the standard, such an approach and the applied tools must be
-appropriate according to 6.7.4.4. There will be several iterative steps until
-the SW component specification will be refined enough to be eligible to
-automatic code generation. A suitable formalism for this approach shall be a
-formal framework which supports formal proofs of properties, supports iterative
-refinement, supports refinement proofs and is suitable wrt. criteria of the
-standard\footnote{\eg, the Event-B method as integrated int the Rodin
-  tool~\cite{Abrial:Rodin}}.
 
 {\bf Documents:} In this phase, the produced document will be the formal
 refinement and verification report created by the formal proofs. This shall
@@ -482,7 +460,47 @@ component unit tests.
 
 {\bf Detailed Description:}
 
-{\Huge \bf TODO}
+This phase shall replace the manual steps component implementation and component
+testing with unit-tests which are present in the original development
+lifecycle. The formal proofs will ensure correctness of the generated code
+wrt. specification, therefore making testing superfluous. The outline of this is
+shown in Figure~\ref{fig:proof-code-generation}, where the green arrow marks the
+proposed ``shortcut''. According to the standard, such an approach and the
+applied tools must be appropriate according to 6.7.4.4.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=\textwidth]{V-Model-abk}
+  \caption{Formal Proof and Automatic Code Generation in V-Model}
+  \label{fig:proof-code-generation}
+\end{figure}
+
+The sub process in this phase is shown in
+Figure~\ref{fig:detailed-sw-comp-phase}.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=.3\textwidth]{SW-Comp-Phase-Details}
+  \caption{Sub Process in SW Component Design Phase}
+  \label{fig:detailed-sw-comp-phase}
+\end{figure}
+
+The SW component refinement phase shall verify the correctness of the refinement
+wrt. the SW component requirements specification. This sub-phase shall be
+iterated until the specification of the behavior of each SW component is
+detailed enough to be eligible to automatic code generation. A suitable
+formalism for this approach shall be a formal framework which supports formal
+proofs of properties, supports iterative refinement, supports refinement proofs
+and is suitable wrt. criteria of the standard\footnote{\eg, the Event-B method
+  as integrated int the Rodin tool~\cite{Abrial:Rodin}}. Finally the source code
+shall be generated from the formal behavior specification.
+
+Although automatically generated, the source code shall contain annotations for
+the pre- and postconditions and other properties, \eg, loop invariants. The
+generated code shall also adhere to the coding standards of as defined in the SW
+design specification. This will ensure that the generated code is human readable
+and facilitate its potential re-use in other projects.
+
 
 \subsubsection{Software Component Implementation Phase}
 \label{sec:softw-comp-impl}
