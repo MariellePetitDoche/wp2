@@ -3,7 +3,7 @@
 
 
 
-%% For openETCS ITEA2 Project 
+%% For openETCS ITEA2 Project
 
 
 %
@@ -217,8 +217,8 @@ openETCS project ]
       \parsep16\p@ \topsep\z@
       \let\fullwidthdisplay\relax
     }%
-    \item[\hskip\labelsep\bfseries Abstract:]% 
-}{% 
+    \item[\hskip\labelsep\bfseries Abstract:]%
+}{%
  \endlist\egroup}
       \long\def\disclaimer#1{\long\gdef\@disclaimer{#1}}
       \disclaimer{
@@ -293,7 +293,9 @@ TERMS AND CONDITIONS.
    \begin{@coverlist}%
      \@distributionfont\@distribution
    \end{@coverlist}%
-   \newpage\thispagestyle{empty}\hbox{}\newpage
+   \newpage
+   This page is intentionally left blank
+   \thispagestyle{empty}\hbox{}\newpage
   \thispagestyle{empty}%
   \setcounter{page}{1}%
   \vspace*{-1.5in}%
