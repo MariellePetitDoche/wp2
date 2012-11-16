@@ -1,13 +1,14 @@
 
 This section describes some of the main aspects of the software development
-process and software lifecycle as specified in CENELEC EN 50128
+process and software lifecycle as specified in CENELEC EN 50128~\cite{EN-50128}
+in the clauses 4 and 5 and their respective sub-clauses.
 
 \subsection{Objectives}
 \label{sec:objectives}
 
 The two most important goals of the SW development lifecycle model of CENELEC EN
-50128 standard are the separation of the lifecycle into well-defined phases and
-the focus on the production and recording of all documentation of the
+50128~\cite{EN-50128} are the separation of the lifecycle into well-defined
+phases and the focus on the production and recording of all documentation of the
 development process. To achieve this, an appropriate software lifecycle model
 must be used and appropriate roles and responsibilities must be assigned. For
 this, the standard specifies several constrains which must be fulfilled.
@@ -15,10 +16,10 @@ this, the standard specifies several constrains which must be fulfilled.
 \subsection{Organisational Structure and Roles}
 \label{sec:organ-struct-roles}
 
-CENELEC EN 50128 defines a set of required roles for the development of SIL4 (or
-SIL3) compliant software. Theses roles are specified in 5.1.2.10 of the
-standard. This distribution and in particular the required separation of several
-of the roles is mandatory for the development process.
+CENELEC EN 50128~\cite{EN-50128} defines a set of required roles for the
+development of SIL4 (or SIL3) compliant software. Theses roles are specified in
+5.1.2.10 of the standard. This distribution and in particular the required
+separation of several of the roles is mandatory for the development process.
 
 \begin{figure}[ht]
   \centering
@@ -28,39 +29,37 @@ of the roles is mandatory for the development process.
 \end{figure}
 
 Figure~\ref{fig:preferred-roles} shows the preferred organisational structure
-according to CENELEC EN 50128, in particular the role separations, \eg, the
-verifier (VER) cannot be the same person as tester, the requirements manager
-(RQM) must be a different person than the integrator (INT) and the validator
-(VAL) must be independent of the project manager (PM) in the sense that the VAL
-does not report to the RQM.
+according to CENELEC EN 50128, in particular the requirements of the role
+separations, \eg, the verifier (VER) cannot be the same person as tester, the
+requirements manager (RQM) must be a different person than the integrator (INT)
+and the validator (VAL) must be independent of the project manager (PM).
 
 \subsection{Documentation}
 \label{sec:documentation}
 
-The development according to CENELEC EN 50128 is document-centered and many
-mandatory documents mus be created.  In such a development process, not only the
-SW shall be of concern, but also the generated documentation, in particular the
-update of existing documentation and the verification of consistency regarding
-related or referenced documents.
+The development according to CENELEC EN 50128~\cite{EN-50128} is
+document-centered and many mandatory documents must be created.  In such a
+development process, not only the SW shall be of concern, but also the generated
+documentation, in particular the update of existing documentation and the
+verification of consistency regarding related or referenced documents.
 
 \subsubsection{Consistency of Documentation}
 \label{sec:cons-docum}
 
 It is mandatory to have a consistent definition and usage of all terms,
-abbreviations etc. in all produced documents. This is especially important if
-the development process uses small scale iterations, as the consistency must be
-assured and restored if necessary after each iteration. In particular, it must
-be assured at all times, that dependent documents, \ie, in hierarchical relation
-do not contradict each other.
+abbreviations etc. in all produced documents. The internal consistency of the
+documents must be ensured and restored if necessary after each iteration. In
+addition, it must be assured at all times, that dependent documents, \ie, in
+hierarchical relation do not contradict each other.
 
 \subsubsection{Traceability of Requirements}
 \label{sec:trac-requ}
 
 For each of the generated documents, the traceability must be assured by
 referencing all other concerned documents, by specifying unique reference
-numbers and by versioning of the documents. Like consistency, traceability is a
-mandatory aspect which is often not a concern in more general software
-development processes.
+numbers and by versioning of the documents (cf. §6.5.4.14 and §6.5.4.15). Like
+consistency, traceability is a mandatory aspect in the development of safety
+related SW.
 
 \subsection{Support Tool Usage}
 \label{sec:tool-usage}
@@ -76,8 +75,11 @@ related system.
 The selected tools shall be able to cooperate in the sense that the output of
 one tool is usable as input for another tool. The usage of tools of the classes
 T2 and T3 must be justified by giving evidence that erroneous can be
-detected. It is possible to replace manual tasks by automatization using tools,
-in this case evidence for the appropriateness of the tools must be delivered.
+detected. It is possible to replace manual tasks by automation using tools, in
+this case evidence for the appropriateness of the tools must be delivered (cf.
+§6.7.4.1, §6.7.4.2, §6.7.4.3, §6.7.4.4, §6.7.4.5 or §6.7.4.6, §6.7.4.7,
+§6.7.4.8, §6.7.4.9, §6.7.4.10, §6.7.4.11, Table~1 in CENELEC EN
+50128~\cite{EN-50128}).
 
 
 %%% Local Variables:

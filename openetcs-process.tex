@@ -1,12 +1,12 @@
 
 The participating roles in the software development process are defined in
-CENELEC EN 50128 Figure~2 (in this document
+CENELEC EN 50128~\cite{EN-50128} Figure~2 (in this document
 Figure~\ref{fig:preferred-roles}). In the following all references to ``the
-standard'' will refer to CENELEC EN 50128:2011~\cite{EN-50128}.
+standard'' refer to CENELEC EN 50128:2011~\cite{EN-50128}.
 
 We will first list and describe the roles in
 Section~\ref{sec:participating-roles}, then we will shortly describe the SW
-planing phase in Section~\ref{sec:documents--plan} and present the overall
+planning phase in Section~\ref{sec:documents--plan} and present the overall
 lifecycle phases in Section~\ref{sec:lifecycle-phases}. A detailed description
 for the system development phase is given in Section~\ref{sec:syst-devel-phase}
 and for each of the SW development phases in
@@ -16,126 +16,129 @@ gives a short conclusion on the proposed development process for openETCS.
 \subsection{Participating Roles}
 \label{sec:participating-roles}
 
-Each of the participants must be noted and her name and role recorded. Which
+Each of the participants must be noted and his name and role recorded. Which
 role can be taken by the same person is regulated as shown in
 Figure~\ref{fig:preferred-roles}.
 
 \subsubsection{Requirements Manager (RQM)}
 \label{sec:requ-magang-rqm}
 
-The main task of the RQM is to take care of the software requirements. She will
-specify the software requirements, ensure their traceability wrt. system level
-requirements and ensure the consistency of the SW requirement specification.
+The main task of the RQM is to take care of the software requirements. He will
+specify the software requirements, ensure the traceability between them and the
+system level requirements and ensure the consistency of the SW requirement
+specification.
 
 \subsubsection{Designer (DES)}
 \label{sec:designer}
 
 The main task of the DES is to create acceptable solutions from the SW
-requirement specifications. She is responsible for the decisions which design
+requirement specifications. He is responsible for the decisions which design
 methods to apply and which tools to use. The DES develops the software component
-specifications and ensures their traceability and consistency wrt. SW
-requirements specification.
+specifications and ensures the traceability and consistency of these
+specifications and the SW requirements specification.
 
 \subsubsection{Implementer (IMP)}
 \label{sec:implementer}
 
 The main task of the IMP is the transformation of the software design solution
-into source code, DSLs or other appropriate formalisms. Besides the
-implementation she will produce the documentation describing the implementation,
-the applied methods, data types and data structures. She will also ensure the
-traceability wrt. SW design. The IMP will apply the specified coding standards,
-use the specified programming languages and use safety design principles.
+into source code, domain specific languages (DSL) or other appropriate
+formalisms. Besides the implementation he shall produce the documentation
+describing the implementation, the applied methods, data types and data
+structures. He shall also ensure the traceability between the implementation and
+the SW design. The IMP shall apply the specified coding standards, use the
+specified programming languages and the safety design principles.
 
 \subsubsection{Tester (TST)}
 \label{sec:tester}
 
-The TST is responsible for the planning of all test activities and will produce
-the test specification which includes the test cases and their objectives. She
-is responsible to assure the execution of the SW tests, the recording of their
-outcomes and to select the test equipments and methods. The TST will communicate
-relevant deviations from the specifications to the change management.
+The TST ensures that all test activities are planned and shall produce the test
+specification which includes the test cases and their objectives. He is
+responsible to assure the execution of the SW tests, the recording of their
+outcomes and to select the test equipments and methods. The TST shall identify
+deviations from the specifications in the report and communicate them to the
+change management.
 
 \subsubsection{Verifier (VER)}
 \label{sec:verifier}
 
 The VER is responsible to produce the SW verification plan which specifies what
-and how it has to be verified and what has to be produced as evidence. She will
-evaluate all deviations from the verification plan according to their potential
-impact and risk and communicate all deviations to the change management. The VER
-records all outcomes of the verification activities and will produce the
-verification report.
+and how it has to be verified and what has to be produced as evidence. He shall
+identify and evaluate all anomalies according to their potential impact and risk
+and communicate all deviations to the change management body for further
+evaluation and decision. The VER records all outcomes of the verification
+activities and will produce the verification report. The VER shall manage the
+verification process and ensure the required independence of the activities.
 
 \subsubsection{Integrator (INT)}
 \label{sec:integrator}
 
-The main task of the INT is the test of the integration developed SW into the
-target HW based on the design specification. She will specify the necessary
-integration sequence, the necessary input components and the expected resulting
-components. The INT will record any deviation from the integration test
-specification, communicate them the change management and produce a system
-integration report of the overall outcome.
+The INT shall manage the test of the integration of the developed SW and of the
+integration of the SW into the target HW based on the design specification. He
+will specify the necessary integration sequence, the necessary input components
+and the expected resulting components. The INT will record any anomalies and
+deviations from the integration test specification, communicate them the change
+management and produce a system integration report of the overall outcome.
 
 \subsubsection{Validator (VAL)}
 \label{sec:validator}
 
-The main task of the VAL is to ensure that the software requirements meet the
-intended usage in the specified application area and environment. For this she
-will develop an understanding of the system and its intended environment. She
-will then review the developed SW against the SW specification, evaluate the
-conformity of the development process to the standard and the assigned SIL. She
-will review the correctness, consistency and adequacy of the verification,
-testing, test cases and executed tests, as well as ensuring that the validation
-plan was carried out completely.
+The VAL is responsible for the creation of the validation plan. He ensures that
+the software requirements meet the intended usage in the specified application
+area and environment. For this he will develop an understanding of the system
+and its intended environment. He will then review the developed SW against the
+SW specification, evaluate the conformity of the development process to the
+standard and the assigned SIL. He will review the correctness, consistency and
+adequacy of the verification, testing, test cases and executed tests, as well as
+ensuring that the validation plan was carried out completely.
 
-Based on these analyses she will review the deviations, classify them in terms
+Based on these analyses he will review the deviations, classify them in terms
 of risk, communicate them to the change management and will give a
 recommendation on the suitability of the developed SW for the intended task, as
 well as indicate necessary constraints.
 
-She will audit and review the overall project wrt. generic development process,
-in particular verify the traceability of all SW requirements. She will ensure
+He will audit and review the overall project wrt. generic development process,
+in particular verify the traceability of all SW requirements. He will ensure
 that all remaining non-conformities are resolved directly or by risk control /
-transfer measures. Finally the VAL will produce a validation report and give her
+transfer measures. Finally the VAL will produce a validation report and give his
 agreement or disagreement for the release of the SW. The produced documents will
 be transmitted to the assessor.
 
 \subsubsection{Assessor (ASR)}
 \label{sec:assessor}
 
-The main task of the ASR is to develop an assessment plan which is communicated
-to the safety authority and the client. The ASR will develop an understanding of
-the system and its intended environment and will evaluate the competency of the
-project staff and the organization, the verification and validation with their
+The ASR shall develop an assessment plan which is communicated to the safety
+authority and the client. The ASR will develop an understanding of the system
+and its intended environment and will evaluate the competency of the project
+staff and the organization, the verification and validation with their
 supporting evidence, the quality management of the development process and the
 configuration and change management with its evidence of use and application.
 
-She will identify and evaluate the risk of the deviations from the SW
+He will identify and evaluate the risk of the deviations from the SW
 specification, produce an assessment report and ensure that the assessment plan
-is executed. She will carry out audits and inspections of the overall
-development process and give a professional view on the fitness of the developed
-SW for he intended use. Based on this she will produce an assessment report and
-record there her findings of the assessment process.
+is executed. He will carry out audits and inspections of the overall development
+process and give a professional view on the fitness of the developed SW for its
+intended use. Based on this he will produce an assessment report and record
+there his findings of the assessment process.
 
 \subsubsection{Project Manager (PM)}
 \label{sec:project-manager}
 
 The main task of the project manager is to ensure the independence of the roles
-and organizations as specified in CENELEC EN 50128. She shall be responsible to
+and organizations as specified in CENELEC EN 50128. He shall be responsible to
 allocate the necessary resources, ensure the competency for the allocated rules
 and allow sufficient time for the proper implementation of all required
 tasks. The PM shall ensure that safety requirements of other stakeholders are
-met and is responsible for the delivery and deployment of the SW. She will
+met and is responsible for the delivery and deployment of the SW. He will
 endorse safety deliverables and will ensure sufficient records and the
 traceability of requirements for safety related decisions.
 
 \subsubsection{Configuration Manager (CM)}
 \label{sec:conf-manag}
 
-The main task of the CM is the responsibility for the SW configuration
-management plan. She owns the configuration management system and ensures the
-clear identification and independent versioning of the SW components. The CM
-shall prepare Release Notes for the SW and document incompatible components if
-applicable.
+The CM shall be responsible for the SW configuration management plan. He owns
+the configuration management system and ensures the clear identification and
+independent versioning of the SW components. The CM shall prepare Release Notes
+for the SW and document incompatible components if applicable.
 
 \subsection{Software Planning Phase}
 \label{sec:documents--plan}
@@ -592,7 +595,7 @@ evaluated.
 \paragraph{Formal Methods:}
 \label{sec:sw-test-formal-methods}
 This phase is executed by the VAL who will validate the developed system. In
-particular, she will analyze whether the chosen combination of techniques are
+particular, he will analyze whether the chosen combination of techniques are
 appropriate wrt. standard, \eg, the use of formal proofs in
 phase~\ref{sec:softw-comp-design} to replace phases~\ref{sec:softw-comp-impl}
 and~\ref{sec:softw-comp-test}.
@@ -600,7 +603,7 @@ and~\ref{sec:softw-comp-test}.
 \paragraph{Documents:}
 \label{sec:sw-test-documents}
 The VAL will produce the overall SW test report in which the VAL will document
-the results of additional tests she specified and executes herself or lets TST
+the results of additional tests he specified and executes himself or lets TST
 execute them. The VAL will also produce a SW validation report which shall
 document the results of the SW validation plan. The VAL will also produce a
 release note which shall document any restriction of the usage of the developed
