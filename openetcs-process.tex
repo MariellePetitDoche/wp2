@@ -18,7 +18,7 @@ gives a short conclusion on the proposed development process for openETCS.
 
 Each of the participants must be noted and his name and role recorded. Which
 role can be taken by the same person is regulated as shown in
-Figure~\ref{fig:preferred-roles}.
+Figure~\ref{fig:preferred-roles} (cf. Table~B.1 to B.10).
 
 \subsubsection{Requirements Manager (RQM)}
 \label{sec:requ-magang-rqm}
@@ -171,11 +171,10 @@ CENELEC EN 50128~\cite{EN-50128}:
   \label{fig:develop-lifecycle-cenelec}
 \end{figure}
 
-The recommended SW development lifecycle model in CENELEC EN
-50128~\cite{EN-50128} is the V-model as shown in
-Figure~\ref{fig:develop-lifecycle-cenelec}. It consists of the SW planning phase
-in the beginning, the SW assessment phase at the end and the following
-development phases:
+The required SW development lifecycle model in CENELEC EN 50128~\cite{EN-50128}
+is the V-model as shown in Figure~\ref{fig:develop-lifecycle-cenelec}. It
+consists of the SW planning phase in the beginning, the SW assessment phase at
+the end and the following development phases:
 
 \begin{itemize}
 \item System Development Phase
@@ -294,7 +293,7 @@ the results of the preceding phase, \ie, the formal system requirements, the
 formal safety requirements and the system architecture specification. The part
 of the system model concerning the software will further be refined, ensuring
 traceability of the software requirements. All existing constraints of the
-constraints between HW and SW will be taken into account.
+constraints between HW and SW will be taken into account (cf. §7.2.1.1).
 
 \paragraph{Formal Methods:}
 \label{sec:sw-req-formal-methods}
@@ -325,15 +324,14 @@ deviations shall be used as test cases in the SW test specification.
 
 \paragraph{Documents:}
 \label{sec:sw-req-documents}
-The documents to produce in this phase are the SW testing
-specification and the SW requirements verification report. The SW testing
-specification (see 6.2, A.5) will provide the detailed approach to test the
-developed SW, concertizing the approach in the SW testing plan. This shall
-provide the information where formal verification will be used, in particular
-where formal techniques like proofs will replace testing of the developed SW.
-The SW requirements verification report will document the results of the
-verification of the SW requirements specification wrt. the criteria specified in
-7.2.4.22 of the standard.
+The documents to produce in this phase are the SW testing specification and the
+SW requirements verification report. The SW testing specification (see 6.2, A.5)
+will provide the detailed approach to test the developed SW, concertizing the
+approach in the SW testing plan. This shall provide the information where formal
+verification will be used, in particular where formal techniques like proofs
+will replace testing of the developed SW.  The SW requirements verification
+report will document the results of the verification of the SW requirements
+specification wrt. the criteria specified in §7.2.4.22 (cf. §7.2.3).
 
 \paragraph{Responsible:}
 \label{sec:sw-req-responsible}
@@ -384,7 +382,7 @@ HW / SW interaction, its influence on the safety aspects of the system and the
 valuation of the usage of already existing SW. It shall also ensure the
 testability and the appropriateness for formal proofs of the resulting SW, in
 particular by minimizing the complexity and the size of the safety relevant
-parts.
+parts (cf. §7.3.1.1 to 7.3.1.5).
 
 \subsubsection{Formal Methods:}
 \label{sec:sw-arch-formal-methods}
@@ -418,7 +416,7 @@ specifications for the SW architecture, the SW design and the SW interface,
 there shall also be the specification for the SW integration test and for the SW
 / HW integration test. Finally the SW architecture and design verification
 report will document whether this phase has been finished in accordance with
-the standard.
+the standard (cf. §7.3.3).
 
 \subsubsection{Responsible:}
 \label{sec:sw-arch-responsible}
@@ -465,9 +463,9 @@ be recorded and the sub-phase shall be iterated until consistency is reached.
 
 \paragraph{Objectives:}
 \label{sec:sw-comp-objectives}
-This phase shall develop a low level specification for each of
-the SW components which is correct wrt. requirements of the SW design
-specification and of the SW component design specification.
+This phase shall develop a low level specification for each of the SW components
+which is correct wrt. requirements of the SW design specification and of the SW
+component design specification (cf. §7.4.1.1, §7.4.1.2).
 
 \paragraph{Formal Methods:}
 \label{sec:sw-comp-formal-methods}
@@ -489,7 +487,7 @@ verification report created by the formal proofs. This shall describe the proof
 steps, the refinements and the necessary lemmas to prove the properties and the
 refinements. The document shall also include the necessary justifications to
 replace the manual step of SW component implementation and SW component unit
-tests.
+tests (cf. §7.4.3).
 
 \paragraph{Responsible:}
 \label{sec:sw-comp-responsible}
@@ -560,7 +558,7 @@ adherence to all SW and safety requirements by the formal model.
 This phase shall demonstrate the correct functioning of the combination of the
 developed SW components, in particular in their target HW environment. The
 necessary tests for this phase are specified in the SW / HW integration test
-specification and SW integration test specification.
+specification and SW integration test specification (cf. §7.6.1.1, §7.6.1.2).
 
 \paragraph{Formal Methods:}
 \label{sec:sw-int-formal-methods}
@@ -576,7 +574,7 @@ the developed SW on the target HW. Both shall include the test cases, their
 respective results and document all details of the configuration for the
 tests. The SW integration verification report shall document whether the test
 reports have been written according to their respective specifications and
-adhere to the relevant parts of the standard for test reports.
+adhere to the relevant parts of the standard for test reports (cf. §7.6.3).
 
 \paragraph{Responsible:}
 \label{sec:sw-int-responsible}
@@ -591,7 +589,7 @@ The objective of this phase is to validate the adequacy of the developed SW and
 its integration wrt. system requirements specification, the functional
 properties and the safety related properties of the system according to the
 SIL. In this phase the overall fitness for purpose of the system will be
-evaluated.
+evaluated (cf. §7.7.1.1).
 
 \paragraph{Formal Methods:}
 \label{sec:sw-test-formal-methods}
@@ -608,7 +606,7 @@ the results of additional tests he specified and executes himself or lets TST
 execute them. The VAL will also produce a SW validation report which shall
 document the results of the SW validation plan. The VAL will also produce a
 release note which shall document any restriction of the usage of the developed
-software.
+software (cf. §7.7.3).
 
 \paragraph{Responsible:}
 \label{sec:sw-test-responsible}
