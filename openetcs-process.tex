@@ -203,10 +203,16 @@ methods. This has the following primary objectives:
 \item Allow for early discovery of errors in the  specifications
 \item Replacement of manual steps by automatic transformations with proven
   properties
+\item Decrease the development cost by increased automation
+\item Facilitate re-use and integration of SW
+\item Eliminate ambiguous interpretations of the informal specification
+\item Facilitate traceability of requirements
 \end{itemize}
 
 For each of the development phases of the lifecycle model of the standard, we
-will propose how formal methods should be applied for openETCS.
+will propose how formal methods should be applied for openETCS. After each phase
+is terminated there will be specific new formal models which will be used in the
+later phases.
 
 \subsection{System Development Phase}
 \label{sec:syst-devel-phase}
@@ -324,14 +330,15 @@ deviations shall be used as test cases in the SW test specification.
 
 \paragraph{Documents:}
 \label{sec:sw-req-documents}
-The documents to produce in this phase are the SW testing specification and the
-SW requirements verification report. The SW testing specification (see 6.2, A.5)
-will provide the detailed approach to test the developed SW, concertizing the
-approach in the SW testing plan. This shall provide the information where formal
-verification will be used, in particular where formal techniques like proofs
-will replace testing of the developed SW.  The SW requirements verification
-report will document the results of the verification of the SW requirements
-specification wrt. the criteria specified in §7.2.4.22 (cf. §7.2.3).
+The documents to produce in this phase are the SW requirements specification,
+the overall SW testing specification and the SW requirements verification
+report.  The overall SW testing specification will provide the detailed approach
+to test the developed SW, concretizing the approach in the SW testing plan. This
+shall provide the information where formal verification will be used, in
+particular where formal techniques like proofs will replace testing of the
+developed SW.  The SW requirements verification report will document the results
+of the verification of the SW requirements specification wrt. the criteria
+specified in §7.2.4.22 (cf. §7.2.3).
 
 \paragraph{Responsible:}
 \label{sec:sw-req-responsible}
@@ -339,7 +346,41 @@ RQM
 
 \paragraph{Detailed Description:}
 \label{sec:sw-req-deta-descr}
-Figure~\ref{fig:detailed-sw-dev-phase} shows the sub-phases of the SW
+For the SW requirements specification, formal methods can be applied in
+different ways:
+\begin{itemize}
+\item The increased precision and removal of ambiguity from an informal
+  specification leads to a clear and precise expression, traceability and
+  completeness of the requirements wrt. input documents can be ensured formally
+  (cf. §7.2.4.4).
+\item The description of the SW requirements specification will be more precise
+  and understandable for the personnel involved in the lifecycle (cf. §7.2.4.5).
+\item The different modes of operation and in particular the formal description
+  of the conditions for mode transitions will be more precise (cf. §7.2.4.7).
+\item The required methods for SW self-checking can be formalized and their
+  properties, \eg, completeness, freeness from false-positives, can be formally
+  verified (cf. §7.2.4.10).
+\item The testability of the safety relevant functions can be proven
+  (cf. §7.2.4.12).
+\end{itemize}
+In general, the usage of formal methods and modeling for the SW requirements
+specification is highly recommended. For openETCS, applicable formal methods for
+this phase are
+
+\begin{itemize}
+\item B-method (cf. D.28.9) which allows for modeling on different abstraction
+  levels and iterative refinement.
+\item model-checking (cf. D.28.10) which allows for automatic verification of
+  finite state systems.
+\item HOL(?) (cf. D.28.3)
+\end{itemize}
+
+For the overall SW test specification the use of modeling is recommended
+(cf. A.7) and for this formal methods are one of the highly recommended methods
+(cf. A.17), \ie, a formal model for model-based testing can be part of the
+overall SW test specification.
+
+Figure~\ref{fig:detailed-sw-dev-phase} shows the proposed sub-phases of the SW
 requirements phase.
 
 \begin{figure}[ht]
@@ -366,6 +407,7 @@ formal specification  and the consistency and correctness wrt. the system
 requirements and the safety requirements shall be verified formally. The
 deviations shall be documented. They shall be fixed in the next in-phase
 iteration.
+
 
 
 
